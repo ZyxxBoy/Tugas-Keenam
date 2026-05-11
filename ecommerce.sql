@@ -169,6 +169,17 @@ ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
 COMMIT;
 
+INSERT INTO products (nama_produk, harga, deskripsi, stok)
+VALUES ('Mouse Gaming', 150000, 'RGB Wireless', 20);
+
+SELECT * FROM products;
+
+UPDATE products
+SET stok = 15
+WHERE id = 1;
+
+DELETE FROM products
+WHERE id = 1;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
